@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="w-full p-10 h-screen bg-zinc-900">
+            <div class="flex p-10 flex-col w-[500px] bg-zinc-800 rounded-lg shadow-lg">
+                <form method="post" action="/register">
+                <h1 class="text-4xl text-white mb-4">Welcome to Express Auth</h1>
+                <p class="text-lg text-gray-400 mb-8 font-semibold">Please create your account</p>
+                <input type="text" name="username" placeholder="Username" class="mb-4 p-2 rounded bg-zinc-800 text-white" required />
+                <input type="text" name="email" placeholder="Email" class="mb-4 p-2 rounded bg-zinc-800 text-white" required />
+                <input type="number" name="age" placeholder="age" class="mb-4 p-2 rounded bg-zinc-800 text-white" required />
+                <input type="password" name="password" placeholder="Password" class="mb-4 p-2 rounded bg-zinc-800 text-white" required />
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Sign Up</button>
+                </form>
+                  <a href="/login" class="w-full bg-gray-700 text-white px-4 py-2 mt-4 rounded-lg hover:bg-gray-800">
+                    Already have an account? Login
+                  </a>
+                </form>
+            </div>
+    </div>
+  </body>
+</html>
