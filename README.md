@@ -1,6 +1,6 @@
-﻿# React Weather App 🌦️
+﻿# EXpress Auth Jwt Bcrypt
 
-This is a weather forecasting application built using ReactJS and Tailwindcss, integrating real-time data from a weather API. It allows users to search for any city and view temperature, humidity, wind speed, and weather conditions dynamically.
+This is a authentication and authorization based security app.
 
 ##  Table of Contents
 
@@ -10,19 +10,19 @@ This is a weather forecasting application built using ReactJS and Tailwindcss, i
 
 -  [License](#license)
 
--  [Screenshots](#screenshot)
-
   
 
 ##  Technologies-Used
 
   
 
-- ReactJs
+- Nodejs
+
+- ExpressJs
+
+- Mongodb
 
 - Tailwindcss
-
-- Weather API
 
   
 
@@ -39,12 +39,12 @@ Step-by-step instructions to set up the project locally:
 
 1. Clone the repository:
 
-        git clone https://github.com/Roshan-Metrix/react_weather_app.git
+        https://github.com/Roshan-Metrix/express_auth_jwt_bcrypt.git
 
   
 2. Navigate to the project directory:
 
-       cd react_weather_app
+       cd express_auth_jwt_bcrypt
 
 3. Install dependencies
 
@@ -52,7 +52,7 @@ Step-by-step instructions to set up the project locally:
 
 4. Run App
 
-       npm start dev
+       node app.js
 
   
 ## License
