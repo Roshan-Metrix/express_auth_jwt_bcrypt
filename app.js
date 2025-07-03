@@ -37,7 +37,7 @@ app.post("/register", async (req, res) => {
   });
 });
 
-app.get("/home", (req, res) => {
+app.get("/home",isLoggedIn, (req, res) => {
   res.render("home");
 });
 
@@ -67,7 +67,7 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.get("/delete", async (req, res) => {
+app.get("/delete",isLoggedIn, async (req, res) => {
   try {
     const token = req.cookies.token;
     if (!token) return res.status(401).send("Unauthorized");
@@ -87,6 +87,21 @@ app.get("/delete", async (req, res) => {
     res.status(500).send("Error deleting account.");
   }
 });
+
+function isLoggedIn(req, res, next){
+  if(!req.cookies.token){
+    return res.redirect('login');
+  } else {
+    try {
+      let data = jwt.verify(req.cookies.token,"roshannnn");
+      req.user = data;
+      next();
+    }catch(err){
+      return res.send("Invalid token, please log in again");
+    }
+  }
+}
+
 
 app.listen(3000, () => {
   console.log("Server is running on http://localhost:3000");
