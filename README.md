@@ -1,4 +1,4 @@
-﻿# EXpress Auth Jwt Bcrypt
+﻿# Express Auth Jwt Bcrypt
 
 This is a authentication and authorization based security app.
 
