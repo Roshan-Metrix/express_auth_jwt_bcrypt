@@ -37,8 +37,10 @@ app.post("/register", async (req, res) => {
   });
 });
 
-app.get("/home",isLoggedIn, (req, res) => {
-  res.render("home");
+app.get("/home",isLoggedIn,async (req, res) => {
+  let user = await userModel.findOne({ email:req.user.email })
+  console.log(user);
+  res.render("home",{ user });
 });
 
 app.get("/login", (req, res) => {
@@ -46,8 +48,8 @@ app.get("/login", (req, res) => {
 });
 
 app.post("/login", async (req, res) => {
-  const { username, password } = req.body;
-  let user = await userModel.findOne({ username });
+  const { email, password } = req.body;
+  let user = await userModel.findOne({ email });
   if (!user) {
     return res.status(400).send("User not found");
   }
