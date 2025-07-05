@@ -24,6 +24,8 @@ This is a authentication and authorization based security app.
 
 - Tailwindcss
 
+- JWT & BCRYPT
+
   
 
 
