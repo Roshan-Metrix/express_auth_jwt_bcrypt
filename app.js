@@ -5,6 +5,9 @@ const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 const userModel = require("./models/user");
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 app.set("view engine", "ejs");
 app.use(express.json());
