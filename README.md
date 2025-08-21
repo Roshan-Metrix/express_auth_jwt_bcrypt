@@ -50,9 +50,13 @@ Step-by-step instructions to set up the project locally:
 
 3. Install dependencies
 
-       npm install  
+       npm install
+   
+5. Add  your mongodb url , for eg:
 
-4. Run App
+       http://localhost:27017/app
+
+6. Run App
 
        node app.js
 
